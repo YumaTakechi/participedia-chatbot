@@ -1,5 +1,11 @@
-bertopic==0.16.4
-keybert==0.8.5
-numpy==1.26.4
-pandas==2.2.3
-faiss-cpu==1.10.0
+bertopic
+keybert
+numpy
+pandas
+faiss-cpu
+fastapi
+umap
+nltk
+seaborn
+matplot
+sentence-transformers
