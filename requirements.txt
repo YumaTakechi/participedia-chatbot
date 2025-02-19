@@ -1,4 +1,5 @@
-bertopic==0.16.4
-keybert==0.8.5
-numpy==1.26.4
-pandas==2.2.3
+bertopic
+keybert
+numpy
+pandas
+psycopg2-binary
