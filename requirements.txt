@@ -4,9 +4,10 @@ numpy
 pandas
 faiss-cpu
 fastapi
-umap
+umap-learn
 nltk
 seaborn
 matplot
 sentence-transformers
 psycopg2-binary
+google-cloud-storage
