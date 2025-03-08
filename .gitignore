@@ -4,3 +4,5 @@ __pycache__/
 *.faiss
 
 participedia_venv/
+
+.DS_Store

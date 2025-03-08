@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List, Dict
 from test_query_handler import UserQueryHandlerTest
 from test_faiss_handler import FaissHandlerTest
 
