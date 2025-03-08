@@ -11,3 +11,4 @@ matplot
 sentence-transformers
 psycopg2-binary
 google-cloud-storage
+pyarrow
