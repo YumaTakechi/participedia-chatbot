@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import faiss
 import pandas as pd
-
 from faiss_search import faiss_search, format_faiss_results
 from query_embedding import create_query_embedding
 
@@ -30,11 +29,15 @@ cases_with_topics_df = pd.read_csv("../cases_with_topics.csv")
 
 # print(type(results))
 
+@app.get("/")
+async def read_root():
+    return {'Participedia Chatbot'}
+
 
 @app.post("/search_cases")
 async def search_cases(request: SearchRequest):
     query_embedding = create_query_embedding(request.user_query)
     faiss_indices = faiss_search(query_embedding, request.top_n, faiss_index)
     results = format_faiss_results(faiss_indices, cases_with_topics_df)
-    
+    # print(results)
     return results
