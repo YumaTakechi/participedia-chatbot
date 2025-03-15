@@ -1,0 +1,12 @@
+bertopic
+keybert
+numpy
+pandas
+faiss-cpu
+fastapi
+umap
+nltk
+seaborn
+matplot
+sentence-transformers
+psycopg2-binary
