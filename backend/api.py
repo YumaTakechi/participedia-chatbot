@@ -22,7 +22,7 @@ app.add_middleware(
     allow_methods=["GET", "POST"]
 )
 
-FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../standalone_frontend'))
+FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../frontend'))
 
 # Check if the directory exists
 if not os.path.exists(FRONTEND_DIR):
@@ -69,9 +69,10 @@ async def search_cases(request: SearchRequest):
             full_query = " ".join([msg["message"] for msg in request.conversation_history]) + " " + request.user_query
 
         query_embedding = create_query_embedding(request.user_query)
-        faiss_indices = faiss_search(query_embedding, 3, faiss_index)
+        faiss_indices = faiss_search(query_embedding, , faiss_index)
         faiss_results = format_faiss_results(faiss_indices, cases_with_topics_df)
 
+        #TODO: put this formating to format_faiss_results
         results = []
         for result in faiss_results:
                 results.append(f'<a href="{result["url"]}" target="_blank">{result["title"]}</a>')
