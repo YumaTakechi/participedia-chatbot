@@ -4,6 +4,7 @@ numpy
 pandas
 faiss-cpu
 fastapi
+fastapi[standard]
 umap-learn
 nltk
 seaborn
