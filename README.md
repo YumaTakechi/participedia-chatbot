@@ -1,1 +1,1 @@
-# perticipedia-chatbot
+# participedia-chatbot
